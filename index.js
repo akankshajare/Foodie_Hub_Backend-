@@ -24,7 +24,10 @@ app.get("/",(req,res)=>{
     res.send("hello")
 })
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:[
+        "http://localhost:5173",
+        "https://reliable-genie-b63e5b.netlify.app/"
+    ],
     credentials:true
 }))
 
